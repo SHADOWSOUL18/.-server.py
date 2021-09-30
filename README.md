@@ -12,17 +12,27 @@ def ejemplo(name):
 
 @app.route('/palindromo', methods=['GET'])
 def ejercicio1():
-    # Su código va aquí
+    texto = input("Ingrese una palabra: ").lower()
+    rever = texto[::-1]
+
+    if texto == rever:
+      print("La palabra ingresada si es palindromo!!")
+    else:
+      print("La palabra ingresada no es palindromo!!")
     return
 
 @app.route('/operaciones', methods=['GET'])
 def ejercicio2():
-    # Su código va aquí
+    a,b = input()
+    print('suma', a+b ,',resta', a-b,',multiplicacion', a*b,'division', a/b)
     return
 
 @app.route('/ordenar', methods=['GET'])
 def ejercicio3():
-    # Su código va aquí
+    a,b,c = input()
+    numeros = a,b,c
+    ordenados = sorted(numeros)
+    print(ordenados)
     return
 
 
